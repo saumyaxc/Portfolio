@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import './Header.css';
+import { FiMenu, FiX } from 'react-icons/fi';
 
 export default function Header() {
   const [activeSection, setActiveSection] = useState('');
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -18,20 +21,37 @@ export default function Header() {
     };
 
     window.addEventListener('scroll', handleScroll);
-    handleScroll(); // run on first load
+    handleScroll();
     return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth <= 768);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
   }, []);
 
   return (
     <header className="header">
       <div className="nav-wrapper">
-        <nav className="nav">
+         <div className={`hamburger ${menuOpen ? 'open' : ''}`} onClick={() => setMenuOpen(!menuOpen)}>
+          {menuOpen ? <FiX size={22} /> : <FiMenu size={22} />}
+        </div>
+        <nav className={`nav ${menuOpen ? 'open' : ''}`}>
           <a href="#home" className={`nav-link ${activeSection === 'home' ? 'active' : ''}`}>Home</a>
+          <a href="#about" className={`nav-link ${activeSection === 'about' ? 'active' : ''}`}>About Me</a>
           <a href="#projects" className={`nav-link ${activeSection === 'projects' ? 'active' : ''}`}>Projects</a>
           <a href="#experience" className={`nav-link ${activeSection === 'experience' ? 'active' : ''}`}>Experience</a>
-          <a href="#about" className={`nav-link ${activeSection === 'about' ? 'active' : ''}`}>About Me</a>
+          
+
+          {isMobile && (
+            <a href="#contact" className="header-button">Contact Me</a>
+          )}
         </nav>
-        <a href="#contact" className="header-button">Contact Me</a>
+
+        {!isMobile && (
+          <a href="#contact" className="header-button">Contact Me</a>
+        )}
       </div>
     </header>
   );

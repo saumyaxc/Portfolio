@@ -1,0 +1,99 @@
+.about-section {
+  padding: 10vh 10vw;
+  background-color: #f7fdf8;
+}
+
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  align-items: center;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-text {
+  flex: 1;
+  min-width: 300px;
+  animation: fadeInUp 1s ease forwards;
+}
+
+.about-heading {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #245c34;
+}
+
+.about-intro,
+.about-values {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.about-skills,
+.about-fun-facts {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 1.5rem;
+}
+
+.about-skills li,
+.about-fun-facts li {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.about-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  animation: fadeIn 1.5s ease forwards;
+}
+
+.about-image img {
+  width: 300px;
+  height: auto;
+  border-radius: 50%;
+  border: 6px solid #245c34;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Simple fade animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+  }
+
+  .about-image img {
+    width: 200px;
+  }
+
+  .about-heading {
+    font-size: 2rem;
+  }
+}
