@@ -1,11 +1,22 @@
 import React from 'react';
+import './Footer.css';
+import { FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa';
 
 export default function Footer() {
   return (
-    <footer style={{ display: 'flex', justifyContent: 'center', gap: '1.5rem', padding: '1.5rem 0', background: '#f5f5f5', borderTop: '1px solid #ddd' }}>
-      {/* <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer"><FaGithub size={24} /></a>
-      <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer"><FaLinkedin size={24} /></a>
-      <a href="mailto:you@example.com"><FaEnvelope size={24} /></a> */}
+    <footer className="footer">
+      <div className="footer-icons">
+        <a href="https://www.linkedin.com/in/saumya-chourasia" target="_blank" rel="noopener noreferrer">
+          <FaLinkedin />
+        </a>
+        <a href="https://github.com/saumyaxc" target="_blank" rel="noopener noreferrer">
+          <FaGithub />
+        </a>
+        <a href="mailto:saumyachourasia04@gmail.com">
+          <FaEnvelope />
+        </a>
+      </div>
+      <p className="footer-text"> {new Date().getFullYear()} Saumya Chourasia</p>
     </footer>
   );
 }

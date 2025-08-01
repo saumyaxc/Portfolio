@@ -97,3 +97,32 @@
     font-size: 2rem;
   }
 }
+
+.about-icons {
+  margin-top: 1.5rem;
+}
+
+.icon-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+  gap: 1.5rem;
+  margin: 1rem 0;
+}
+
+.icon-grid svg {
+  width: 40px;
+  height: 40px;
+  color: #245c34;
+  transition: all 0.2s ease;
+
+}
+
+.icon-grid svg:hover {
+  color: #3a8b55;
+  transform: scale(1.2);
+
+  background: linear-gradient(45deg, #245c34, #67b26f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transform: scale(1.2) rotate(5deg);
+}
