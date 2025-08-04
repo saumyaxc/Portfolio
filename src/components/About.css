@@ -120,9 +120,8 @@
 .icon-grid svg:hover {
   color: #3a8b55;
   transform: scale(1.2);
-
   background: linear-gradient(45deg, #245c34, #67b26f);
-  -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
-  transform: scale(1.2) rotate(5deg);
+  transform: scale(1.2) /* rotate(5deg); */
 }
