@@ -46,7 +46,7 @@ export default function Projects() {
           </div>
         ))}
       </div>
-      <a href="https://github.com/yourgithub" target="_blank" rel="noopener noreferrer" className="github-button">
+      <a href="https://github.com/saumyaxc" target="_blank" rel="noopener noreferrer" className="github-button">
         See More on GitHub
       </a>
     </section>
