@@ -4,14 +4,15 @@ import './Projects.css';
 export default function Projects() {
   const projects = [
     {
-      title: 'Project Title 1',
-      description: 'Short description of what this project is about. Highlight the main feature or problem it solves.',
-      tech: ['Tech 1', 'Tech 2', 'Tech 3'],
-      link: '#'
+      title: 'California Seismic Website',
+      description: 'Website for California Seismic, free educational resouce for the seismic exam.',
+      tech: ['React', 'JavaScript', 'Figma'],
+      link: 'https://github.com/SeijDeLeon/California-Seismic',
+      image: require('../assets/images/california-seismic.png')
     },
     {
       title: 'Gamespawn Website',
-      description: 'Website for UCR Gamespawn club.',
+      description: 'Website for UCR Gamespawn club, showcasing events and resources.',
       tech: ['Javascript', 'Next.js', 'Tailwind CSS'],
       link: 'https://github.com/gamespawn/gamespawn-website',
       image: require('../assets/images/gamespawn.png')

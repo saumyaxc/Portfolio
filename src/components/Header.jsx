@@ -7,6 +7,7 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
+
   useEffect(() => {
     const handleScroll = () => {
       const sections = ['home', 'projects', 'experience', 'about'];
@@ -42,10 +43,10 @@ export default function Header() {
           <a href="#about" className={`nav-link ${activeSection === 'about' ? 'active' : ''}`}>About Me</a>
           <a href="#projects" className={`nav-link ${activeSection === 'projects' ? 'active' : ''}`}>Projects</a>
           <a href="#experience" className={`nav-link ${activeSection === 'experience' ? 'active' : ''}`}>Experience</a>
-          
+      
 
           {isMobile && (
-            <a href="#contact" className="header-button">Contact Me</a>
+            <a href="#contact" className="nav-link">Contact Me</a>
           )}
         </nav>
 
